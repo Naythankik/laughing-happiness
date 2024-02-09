@@ -22,7 +22,7 @@ a{
 }
 
 div.container{
-  min-height: 100vh;
+  min-height: 1000vh;
   min-width: 350px;
   display: block;
   background: whitesmoke;
@@ -182,8 +182,9 @@ span.hamburger-child::after{
 
 
 header.sticky{
-  position: absolute;
-  top: 7rem;
+  position: sticky;
+  top: .5rem;
+  margin-top: -1.3rem;
   background: none;
   width: 100%;
   display: flex;
@@ -253,9 +254,6 @@ div.nav-search button img{
 }
 
 @media screen and (max-width: 1300px) {
-  header.sticky{
-    top: 9rem;
-  }
   div.sticky-container{
     width: 80%;
     padding: 20px;
