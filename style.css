@@ -135,7 +135,7 @@ button.hamburger{
   background: lightcyan;
   padding: 10px;
   position: absolute;
-  top: 1.7rem;
+  top: 1.6rem;
   right: 1rem;
   outline: none;
   border: none;
@@ -276,6 +276,7 @@ div.nav-search button img{
     top: unset;
     background: var(--sticky-header);
     height: 100px;
+    margin-top: 0;
   }
   a.sticky-home{
     position: absolute;
