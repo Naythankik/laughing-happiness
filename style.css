@@ -837,14 +837,13 @@ article.service-card p{
     font-size: 30px;
   }
 
-  div.article-cards{
-    gap: 20px;
-    margin: 20px auto;
+   div.article-cards{
+    gap: 90px;
   }
   
   article.service-card{
     width: 100%;
-  }
+  } 
 }
 
 /* For galaxy z-fold */
