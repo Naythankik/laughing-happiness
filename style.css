@@ -503,6 +503,18 @@ div.about-img img{
 }
 
 @media screen and (max-width: 1500px){
+
+  div.header-socials {
+    width: 30%;
+  }
+
+  div.header-socials > a{
+  width: 100%;
+  padding: 12px;
+  line-height: 22px;
+  border-radius: 80px;
+}
+
   div.introduction-child,
   div.sticky-container,
   div.about-child
@@ -518,6 +530,10 @@ div.about-img img{
     font-size: 14px;
     line-height: 24px;
     border-radius: 80px;
+  }
+
+  div.about-description{
+    gap: 30px;
   }
 }
 
@@ -558,6 +574,7 @@ div.about-img img{
 
   div.bottom-about-description {
     margin-top: 0;
+    gap: 20px;
   }
 
   div.about-img{
@@ -686,5 +703,12 @@ div.top-about-description span{
 
   div.about-description {
     width: 100%;
+  }
+}
+
+/* For galaxy z-fold */
+@media screen and (max-width: 288px) {
+  div.bottom-about-description {
+    grid-template-columns: 1fr;
   }
 }
