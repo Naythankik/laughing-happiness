@@ -26,12 +26,14 @@ a.sticky-home{
 }
 
 div.introduction-child,
-div.sticky-container{
+div.sticky-container,
+div.about-child{
   width: 65%;
 }
 
 header.sticky,
-section.introduction{
+section.introduction,
+section.about{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +41,8 @@ section.introduction{
 
 
 div.header-socials > a,
-div.introduction-details a{
+div.introduction-details a,
+div.top-about-description a{
   z-index: 1;
   transition: all 0.5s;
   color: var(--header-bg);
@@ -56,7 +59,7 @@ div.introduction-details a{
 }
 
 div.container{
-  min-height: 1000vh;
+  min-height: 100vh;
   min-width: 350px;
   display: block;
   background: whitesmoke;
@@ -332,6 +335,7 @@ div.introduction-cards{
   gap: 30px;
   padding: 30px 0;
   margin-top: 50px;
+  justify-content: space-between;
 }
 
 article.introduction-offer{
@@ -391,7 +395,120 @@ article.introduction-offer a{
   transition: all 0.4s;
 }
 
+section.about{
+  background: rgba(140, 191, 235, .2);
+  position: relative;
+  margin-bottom: 50px;
+}
+section.about::before{
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: -100px;
+  z-index: 0;
+  background: rgba(140, 191, 235, .2);
+}
+
+div.about-child{
+  background: transparent;
+  position: relative;
+}
+div.about-child::before{
+  content: '';
+  background: var(--sticky-header);
+  height: 440px;
+  width: 100%;
+  position: absolute;
+  top: -60px;
+  border-radius: 40px;
+}
+div.about-grand-child{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+div.about-description{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 49%;
+}
+
+div.top-about-description{
+  display: inherit;
+  flex-direction: inherit;
+  gap: 30px;
+  text-transform: capitalize;
+}
+div.top-about-description a{
+  max-width: fit-content;
+  text-transform: capitalize;
+  background: rgba(243, 203, 95, 0.1);
+  color: #F3CB5F;
+}
+div.top-about-description p{
+  font-size: 50px;
+  line-height: 120%;
+  font-weight: 500;
+  z-index: 2;
+}
+
+div.top-about-description span{
+  color : rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  font-family: "DM Sans", sans-serif;
+  z-index: 2;
+}
+
+div.bottom-about-description{
+  margin-top: 50px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+article.about-details{
+  display: grid;
+  gap: 10px;
+}
+
+div.top-details{
+  display: flex;
+  align-items: center;
+  color: var(--header-bg);
+  gap: 10px;
+}
+
+div.top-details img{
+  filter: brightness(0) saturate(100%) invert(13%) sepia(82%) saturate(4112%) hue-rotate(222deg) brightness(87%) contrast(101%);
+}
+
+article.about-details p{
+  color: #748AA0;
+  line-height: 28px;
+  width: 100%;
+}
+
+div.about-img{
+  width: 47%;
+  z-index: 2;
+}
+div.about-img img{
+  width: 100%;
+  /* height: 100%; */
+}
+
 @media screen and (max-width: 1500px){
+  div.introduction-child,
+  div.sticky-container,
+  div.about-child
+   {
+    width: 80%;
+  }
   article.introduction-offer {
     padding: 40px 28px;
   }
@@ -406,8 +523,9 @@ article.introduction-offer a{
 
 @media screen and (max-width: 1300px) {
   div.sticky-container,
-  div.introduction-child{
-    width: 80%;
+  div.introduction-child,
+  div.about-child{
+    width: 100%;
     padding: 20px;
   }
 
@@ -438,6 +556,18 @@ article.introduction-offer a{
     border-radius: 15px;
   }
 
+  div.bottom-about-description {
+    margin-top: 0;
+  }
+
+  div.about-img{
+    height: 550px;
+  }
+
+  div.about-img img{
+    height: 100%;
+  }
+
 }
 
 @media screen and (max-width: 999px) {
@@ -456,8 +586,8 @@ article.introduction-offer a{
   }
 
   header.sticky{
-    position: relative;
-    top: unset;
+    position: sticky;
+    top: 0;
     background: var(--sticky-header);
     height: 100px;
     margin-top: 0;
@@ -519,5 +649,42 @@ article.introduction-offer a{
     width: 100%;
     padding: 20px;
   }
+  div.about-child{
+    padding: 10px;
+  }
 
+  div.about-child::before ,
+  section.about::before {
+    content: none;
+  }
+  
+  div.top-about-description{
+    gap: 15px;
+  }
+
+div.top-about-description a{
+  background: var(--sticky-header);
+  color: white;
+}
+div.top-about-description p{
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: black;
+}
+
+div.top-about-description span{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #545252 !important;
+}
+
+  div.about-img{
+    display: none;
+  }
+
+  div.about-description {
+    width: 100%;
+  }
 }
