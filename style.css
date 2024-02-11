@@ -59,7 +59,7 @@ div.top-about-description a{
 }
 
 div.container{
-  min-height: 100vh;
+  min-height: 1000vh;
   min-width: 350px;
   display: block;
   background: whitesmoke;
@@ -88,10 +88,24 @@ div.header{
 div.home-button{
   display: flex;
   align-items: center;
+  width: auto;
+}
+div.home-button a{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+div.home-button img{
+  filter: none !important;
+  outline: none;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
 div.home-button span{
-  font-size: 28px;
+  font-size: 18px;
 }
 
 nav.scroll-header{
@@ -116,6 +130,7 @@ a.scroll-link:nth-last-child(2){
 
 a.scroll-link div{
   display: flex;
+  align-items: center;
   gap: 7px;
 }
 
@@ -209,6 +224,7 @@ header.sticky{
   background: none;
   width: 100%;
   z-index: 100;
+  padding: 10px;
 }
 
 div.sticky-container{
@@ -545,6 +561,11 @@ div.about-img img{
     padding: 20px;
   }
 
+
+  div.about-child::before{
+    width: 98%;
+  }
+
   section.introduction {
     padding: 70px 0;
     background-size: 100% 70%;
@@ -612,9 +633,24 @@ div.about-img img{
   a.sticky-home{
     position: absolute;
     left: 1rem;
-    display: block;
     z-index: 100;
     font-size: 19px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  a.sticky-home img{
+    filter: none !important;
+    outline: none;
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  a.sticky-home span{
+    font-size: 18px;
   }
 
   div.sticky-container{
