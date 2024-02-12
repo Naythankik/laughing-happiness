@@ -779,7 +779,7 @@ div.top-footer form input{
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   outline: none;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(163, 160, 160, 0.55);
   padding: 16px;
   background: white;
   width: 50%;
@@ -1115,20 +1115,17 @@ div.copyright p{
   }
   div.top-footer form {
     width: 100%;
-    justify-content: space-between;
-    gap: 8px;
+    flex-direction: column;
+    /* gap: 8px; */
   }
   div.top-footer form input {
-    width: 40%;
+    width: 100%;
   }
-  div.top-footer form label{
-    font-size: 12px;
-  }
+
   div.top-footer form button {
-    font-size: 12px;
-    padding: 10px;
-    width: fit-content;
+    padding: 10px 20px;
   }
+  
 }
 
 /* For galaxy z-fold */
