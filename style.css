@@ -28,12 +28,14 @@ a.sticky-home{
 div.introduction-child,
 div.sticky-container,
 div.about-child,
-div.request-bottom{
+div.request-bottom,
+div.footer-child{
   width: 65%;
 }
 
 header.sticky,
-section{
+section,
+footer{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +47,8 @@ div.introduction-details a,
 div.top-about-description a,
 div.service-child > a,
 div.request-left-top a,
-div.request-right button{
+div.request-right button,
+div.top-footer form button{
   z-index: 1;
   transition: all 0.5s;
   color: var(--header-bg);
@@ -415,7 +418,8 @@ article.introduction-offer a{
   transition: all 0.4s;
 }
 
-section.about{
+section.about,
+footer{
   background: rgba(140, 191, 235, .2);
   position: relative;
   margin-bottom: 50px;
@@ -744,6 +748,70 @@ div.request-right button{
   width: fit-content;
 }
 
+footer{
+  padding: 180px 0;
+  margin-bottom: 0;
+}
+
+div.footer-child{
+  display: grid;
+  gap: 50px;
+}
+
+div.top-footer{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+div.top-footer form{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+}
+div.top-footer form label{
+  font-weight: 700;
+  font-size: 16px;
+}
+
+div.top-footer form input{
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  outline: none;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 16px;
+  background: white;
+  width: 50%;
+}
+
+div.top-footer form button{
+  background: var(--sticky-header);
+  outline: none;
+  border: none;
+  color: white;
+  width: fit-content;
+  padding: 16px;
+}
+
+div.copyright{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--header-bg);
+  height: 50px;
+}
+
+div.copyright p{
+  text-transform: capitalize;
+  font-weight: 500;
+  word-spacing: 2px;
+}
+
+
 @media screen and (max-width: 1500px){
 
   div.header-socials {
@@ -760,7 +828,8 @@ div.request-right button{
   div.introduction-child,
   div.sticky-container,
   div.about-child,
-  div.request-bottom
+  div.request-bottom,
+  div.footer-child
    {
     width: 80%;
   }
@@ -783,14 +852,15 @@ div.request-right button{
     font-size: 40px;
     font-weight: 600;
   }
-  
+
 }
 
 @media screen and (max-width: 1300px) {
   div.sticky-container,
   div.introduction-child,
   div.about-child,
-  div.request-bottom{
+  div.request-bottom,
+  div.footer-child{
     width: 100%;
     padding: 20px;
   }
@@ -875,6 +945,8 @@ div.request-right button{
 
   div.request-right {
     width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   div.form-child {
@@ -926,6 +998,14 @@ div.request-right button{
   
   a.sticky-home span{
     font-size: 18px;
+  }
+  div.top-footer h2{
+    font-size: 20px;
+  }
+  
+  div.top-footer form button{
+    font-size: 14px;
+    padding: 13px;
   }
 
   div.sticky-container{
@@ -1027,6 +1107,28 @@ div.request-right button{
   article.service-card{
     width: 100%;
   } 
+
+  div.top-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  div.top-footer form {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  div.top-footer form input {
+    width: 40%;
+  }
+  div.top-footer form label{
+    font-size: 12px;
+  }
+  div.top-footer form button {
+    font-size: 12px;
+    padding: 10px;
+    width: fit-content;
+  }
 }
 
 /* For galaxy z-fold */
