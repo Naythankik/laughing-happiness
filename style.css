@@ -1125,6 +1125,10 @@ div.copyright p{
   div.top-footer form button {
     padding: 10px 20px;
   }
+
+  div.copyright p{
+    font-size: 13px;
+  }
   
 }
 
