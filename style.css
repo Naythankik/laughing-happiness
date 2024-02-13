@@ -669,6 +669,7 @@ div.left-bottom-media{
 
 div.left-bottom-media{
   gap: 10px;
+  width: auto;
 }
 
 div.left-bottom-media div{
@@ -1060,13 +1061,13 @@ div.copyright p{
     filter: none !important;
     outline: none;
     border: none;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
   }
   
   a.sticky-home span{
-    font-size: 18px;
+    font-size: 14px;
   }
   div.top-footer h2{
     font-size: 20px;
