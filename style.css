@@ -96,7 +96,8 @@ div.home-button{
   align-items: center;
   width: auto;
 }
-div.home-button a{
+div.home-button a,
+div.bottom-footer-child:first-of-type a{
   display: flex;
   gap: 10px;
   align-items: center;
@@ -794,6 +795,73 @@ div.top-footer form button{
   padding: 16px;
 }
 
+div.bottom-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+div.bottom-footer-child{
+  display: grid;
+  gap: 35px;
+  width: calc(100% / 5);
+}
+
+div.bottom-footer-child:not(:first-of-type){
+  height: 100%;
+}
+div.bottom-footer-child:first-of-type a img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+div.bottom-footer-child:first-of-type span{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+div.footer-child nav a,
+div.footer-child p{
+  transition: all 0.4s;
+  font-size: 16px;
+  font-weight: 400;
+  color: #748AA0;
+}
+
+div.bottom-footer-child:not(first-of-type) p{
+  width: 90%;
+}
+
+div.bottom-footer-child:not(:first-of-type) p{
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--header-bg);
+}
+
+div.footer-child nav a:hover{
+  color: var(--header-bg);
+}
+
+div.bottom-footer-child nav{
+  display: grid;
+  gap: 20px;
+}
+
+div.footer-socials > img{
+  filter: invert(100%) sepia(0%) saturate(7492%) hue-rotate(45deg) brightness(101%) contrast(100%);
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+div.footer-socials > img:hover{
+  filter: brightness(0);
+}
+
 div.copyright{
   position: absolute;
   bottom: 0;
@@ -803,6 +871,7 @@ div.copyright{
   align-items: center;
   background: var(--header-bg);
   height: 50px;
+  text-align: center;
 }
 
 div.copyright p{
@@ -1129,9 +1198,26 @@ div.copyright p{
   div.copyright p{
     font-size: 13px;
   }
-  
-}
 
+  div.bottom-footer {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  div.bottom-footer-child{
+    width: auto;
+  }
+
+  div.bottom-footer-child:not(first-of-type) p {
+    width: auto;
+    line-height: 1.6;
+  }
+
+  div.bottom-footer-child:not(:first-of-type) {
+    height: auto;
+  }
+}
+  
 /* For galaxy z-fold */
 @media screen and (max-width: 288px) {
   div.bottom-about-description {
